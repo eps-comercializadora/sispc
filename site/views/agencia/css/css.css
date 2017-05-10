@@ -1,0 +1,266 @@
+#img-agencias {
+	width: 100%;
+	/* height: auto; */
+	top: -20%;
+}
+.prviuw {
+    float: left;
+    margin: 3px;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#fotoG{
+
+    min-width: 100%;
+}
+.agencias-banner-listado {
+	width: 100%;
+	height: auto;
+}
+.agencias-banner-listado {
+	/* width: 100%; */
+	height: 250px;
+	margin-bottom: 70px;
+	cursor: pointer;
+}
+
+.title-aviso {
+  background-color: #410707 !important;
+  /* border-color: #000; */
+  border: 1px solid #500000 !important;
+  border-radius: 7px;
+}
+
+.title-termino {
+	color: #df7979 !important;
+}
+
+.texto-top30 {
+	text-shadow: 2px 2px #000;
+	color: #FF8686 !important;
+	margin-top: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.buscaragencia {
+	margin-top: 3px;
+}
+
+.texto-mensaje{
+	font-size: 25px;
+	text-align: center;
+}
+
+#fotoG{
+
+    min-width: 100%;
+}
+
+.vista_ninas {
+    margin-top: 12px;
+    padding: 0px;
+    margin-left: -29px;
+}
+
+.contenedor-img h2 {
+	text-transform: uppercase;
+	color: #ED7A7A;
+	font-weight: 900;
+	text-align: center;
+	position: relative;
+	font-size: 16px;
+	padding: 9px;
+	background: rgba(0, 0, 0, 0.82);
+	margin: 0px 0 0 0;
+}
+
+.contenedor-img div.pie-agencia {
+	text-transform: uppercase;
+	color: #3C1010;
+	font-weight: 900;
+	text-align: center;
+	/* position: relative; */
+	font-size: 16px;
+	padding: 0px;
+	background: linear-gradient(to bottom, #DA0000, #630000);
+	bottom: 0px;
+	position: absolute;
+	min-height: 41px;
+	padding: 5px;
+	width: 100%;
+	color: #f37979;
+}
+.estrella {
+	font-size: 20px;
+	line-height: 1;
+	margin-bottom: 0px;
+	color: #ffd700b3;
+}
+.descripcion-agencia {
+	font-size: 14px;
+	color: #f37979;
+	text-align: justify;
+	font-style: italic;
+	font-family: unset;
+	text-transform: none;
+	/* line-height: 1; */
+	/* padding: 5px; */
+	vertical-align: middle;
+}
+.puntos {
+	font-size: 20px;
+	line-height: 1;
+	margin-bottom: 0px;
+	color: #efb31b;
+	font-style: italic;
+	font-family: unset;
+}
+.buscar-agencias-div {
+	border: 1px solid;
+	padding: 22px;
+	background: #860000;
+	border-radius: 5px;
+	color: #ed7a7a;
+	margin-bottom: 57px;
+	border-color: #510000E6;
+	margin-top: 20px;
+	padding-top: 17px;
+}
+
+div.texto-busqueda {
+	text-align: justify;
+	padding: 10px;
+	font-size: 14px;
+	font-style: unset;
+}
+.alineado {
+	line-height: 2;
+}
+div.col-md-12:nth-child(3) {
+	margin-top: 7px;
+}
+
+.contarores {
+	font-size: 15px;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.contenedor-img img {
+	display: block;
+	position: relative;
+	width: 32px;
+}
+#agencia_name {
+	background: #470000;
+	color: white;
+	border: 1px solid #452c2c;
+}
+/* estos son para pantallas sm */
+/* ---------------------------------------------------------------------------------------------------- */
+@media (min-width: 750px) and (max-width: 970px) {
+.contarores {
+	font-size: 9px;
+	
+	vertical-align: middle;
+	padding: 5px;
+}
+
+#img-agencias {
+	width: 100%;
+	
+	top: 0%;
+}
+.descripcion-agencia {
+	font-size: 10px;
+	vertical-align: middle;
+}
+.contenedor-img img {
+	display: block;
+	position: relative;
+	width: 20px;
+}
+.contenedor-img img {
+	display: block;
+	position: relative;
+	width: 20px;
+}
+.estrella {
+	font-size: 16px;
+	line-height: 1;
+	margin-bottom: 0px;
+	color: #ffd700b3;
+	vertical-align: middle;
+}
+.col-md-1.col-sm-1.col-xs-6 {
+	padding: 0px;
+}
+
+
+}
+/* estos son para pantallas xs */
+/* ---------------------------------------------------------------------------------------------------- */
+@media  (max-width: 749px) {
+.contarores {
+	font-size: 10px;
+	line-height: 1;
+	border-top: 1px solid #f003;
+}
+
+#img-agencias {
+	width: 100%;
+	height: 100%;
+	top: 0%;
+}
+.descripcion-agencia {
+	font-size: 8px;
+	color: black;
+	text-align: justify;
+	font-style: italic;
+	font-family: unset;
+	text-transform: none;
+	line-height: 1;
+}
+.contenedor-img img {
+	display: block;
+	position: relative;
+	width: 20px;
+}
+.contenedor-img img {
+	display: block;
+	position: relative;
+	width: 20px;
+}
+.contenedor-img div.pie-agencia {
+	text-transform: uppercase;
+	color: #3C1010;
+	font-weight: 900;
+	text-align: center;
+	/* position: relative; */
+	font-size: 15px;
+	padding: 0px;
+	background: rgba(227, 105, 105, 0.83);
+	bottom: 0px;
+	position: absolute;
+	min-height: 60px;
+	padding: 10px;
+	width: 100%;
+}
+.estrella {
+	font-size: 12px;
+	line-height: 1;
+	margin-bottom: 0px;
+	color: #ffd700b3;
+}
+
+
+
+
+}
+
+
+/* fin de los media  */
+/* ---------------------------------------------------------------------------------------------------- */

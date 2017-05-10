@@ -1,0 +1,20 @@
+.form-control {
+	margin-bottom: 10px;
+}
+.col-sm-4{
+
+	margin-top: 115px;
+}
+
+
+.btn-success {
+	color: #fff !important;
+	background-color: #650505 !important;
+	border-color: #900 !important;
+}
+
+.btn-success:hover {
+	color: #ff0000 !important;
+	background-color: #650505 !important;
+	border-color: #900 !important;
+}
