@@ -9,12 +9,12 @@
 
 .btn-success {
 	color: #fff !important;
-	background-color: #650505 !important;
-	border-color: #900 !important;
+	background-color: #4e82cc !important;
+	border-color: #5d5ba8 !important;
 }
 
 .btn-success:hover {
-	color: #ff0000 !important;
-	background-color: #650505 !important;
-	border-color: #900 !important;
+	color: #f5f5f5 !important;
+	background-color: #4e82cc !important;
+	border-color: #0014f0 !important;
 }

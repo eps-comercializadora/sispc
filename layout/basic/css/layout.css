@@ -1,7 +1,7 @@
 .navbar-default {
-	/* background-color: #DE0000; */
-	background: linear-gradient(to bottom, #DA0000, #A60000);
-	border-bottom: solid 1px #C00000;
+	background-color: #DE0000;
+	background: linear-gradient(to bottom, #5EA0E1, #0A0878);
+	border-bottom: solid 1px #0002C0;
 	box-sizing: border-box;
 	height: 40px !important;
 	transition: opacity .3s ease;
@@ -24,29 +24,21 @@ color: #FFFFFF;
 border-color: #FFFFFF; 
 }
 .header-titulos {
-color: #FFFFFF; 
-border-color: #FFFFFF; 
-
-
-
-
-
-background-color: #D90000;
-
-
+	color: #FFFFFF;
+	border-color: #FFFFFF;
+	background-color: #4E82CC;
 }
-#pie{
-background-color: #940000;
-
-
-color: #D1D1D1;
-
-
-
-border-color: #D1D1D1;
+#pie {
+	background-color: #131984;
+	color: #D1D1D1;
+	border-color: #D1D1D1;
 }
 .container-fluid.fondo {
-	background-color: #A60000;
+	background-color: #FFECEC;
+}
+.container-fluid .row {
+	margin-top: 50px;
+	padding-top: 16px;
 }
 /* 
 ojo este estilo no se debe tocar 

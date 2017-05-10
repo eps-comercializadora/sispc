@@ -78,13 +78,6 @@
             </div>
     </nav>
 
-    <header>
-        <div class="header-content">
-            
-              header <?php echo APP_SLOGAN ?>
-            
-        </div>
-    </header>
 
     <div class="container-fluid fondo">
 
