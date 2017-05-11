@@ -26,6 +26,14 @@ class principalController extends Controller
 			
 	}
 
+	public function buscar_por_code(){
+
+		
+
+		echo json_encode($this->_index->buscar_por_code($_GET['codigo']));
+
+	}
+
 }
 
 	

@@ -6,7 +6,10 @@ class principalModel extends Model
         parent::__construct();
     }
     
-public function a(){
+public function buscar_por_code($codigo){
+
+
+$sql="select * from empresa where codigo_sica like '%$codigo%'";
 
 $datos = $this->_db->query($sql);
         
