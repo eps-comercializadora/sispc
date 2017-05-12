@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 11, 2017 at 08:44 AM
+-- Generation Time: May 12, 2017 at 04:05 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.37
 
@@ -569,13 +569,6 @@ CREATE TABLE `email_emp` (
   `tipo` varchar(50) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Dumping data for table `email_emp`
---
-
-INSERT INTO `email_emp` (`id_email`, `id_propietario`, `email`, `tipo`) VALUES
-(27, 1, 'correo 1', 'empresa');
-
 -- --------------------------------------------------------
 
 --
@@ -590,14 +583,6 @@ CREATE TABLE `email_gere` (
   `tipo` varchar(50) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Dumping data for table `email_gere`
---
-
-INSERT INTO `email_gere` (`id_email`, `id_propietario`, `email`, `tipo`) VALUES
-(16, 51, 'correo 2 dueño', 'propietario'),
-(17, 52, 'asdasd@sadfsf.com', 'encargado');
-
 -- --------------------------------------------------------
 
 --
@@ -607,7 +592,8 @@ INSERT INTO `email_gere` (`id_email`, `id_propietario`, `email`, `tipo`) VALUES
 DROP TABLE IF EXISTS `empresa`;
 CREATE TABLE `empresa` (
   `id_empresa` int(11) NOT NULL,
-  `id_parroquia` int(11) NOT NULL,
+  `id_municipio` int(11) DEFAULT NULL,
+  `id_parroquia` int(11) DEFAULT NULL,
   `codigo_sica` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `tipo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `rif` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
@@ -620,8 +606,314 @@ CREATE TABLE `empresa` (
 -- Dumping data for table `empresa`
 --
 
-INSERT INTO `empresa` (`id_empresa`, `id_parroquia`, `codigo_sica`, `tipo`, `rif`, `razon_social`, `tipo_ente`, `circuito`) VALUES
-(1, 807, '001', 'J', '2057420569', 'Panaderìa Pastelerìa y Charcuterìa Casanay C A', '42-Panadería y Pasteleria', 'c1');
+INSERT INTO `empresa` (`id_empresa`, `id_municipio`, `id_parroquia`, `codigo_sica`, `tipo`, `rif`, `razon_social`, `tipo_ente`, `circuito`) VALUES
+(879, 296, 0, '97007', 'J', '311898328', 'Panaderìa Pastelerìa y Charcuterìa Casanay C A', '42-Panadería y Pasteleria', 'c1'),
+(880, 296, 0, '97785', 'J', '313892505', 'panaderia marsella ca', '42-Panadería y Pasteleria', 'c1'),
+(881, 296, 0, '447653', 'V', '235847660', 'PASTELERIA  Y REPOSTERIA LISBETH, F.C', '42-Panadería y Pasteleria', 'c1'),
+(882, 296, 0, '36972', 'J', '311036741', 'PANAD. PAST. LA CANDELARIA, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(883, 296, 0, '449946', 'J', '407878018', 'BODEGON MI ESTRELLA DE NAZARET, C.A', '42-Panadería y Pasteleria', 'c1'),
+(884, 296, 0, '417364', 'V', '176240624', 'PANADERIA MIS DELICIAS QUIJADA', '42-Panadería y Pasteleria', 'c1'),
+(885, 296, 0, '37307', 'J', '295263619', 'PANAD ABASTOS GUARAPICHE CA', '42-Panadería y Pasteleria', 'c1'),
+(886, 296, 0, '519577', 'V', '166273478', 'PANADERIA Y PASTELERIA LA ARTESANA AR C.A', '42-Panadería y Pasteleria', 'c1'),
+(887, 296, 0, '247656', 'V', '153451350', 'PANADERIA SANCHEZ', '42-Panadería y Pasteleria', 'c1'),
+(888, 296, 0, '447046', 'V', '128878536', 'Inversiones San Miguel Arcangel de Cecilio Bastardo', '42-Panadería y Pasteleria', 'c1'),
+(889, 296, 0, '447044', 'V', '168415610', 'Inversiones Garcia, C.A', '42-Panadería y Pasteleria', 'c1'),
+(890, 296, 0, '447646', 'V', '110116019', 'INVERSIONES DAISY J, F.C', '42-Panadería y Pasteleria', 'c1'),
+(891, 296, 0, '447053', 'V', '185918463', 'Inversiones Alvarez, F.C', '42-Panadería y Pasteleria', 'c1'),
+(892, 296, 0, '97108', 'J', '295712448', 'INVERSIONES ACEMIL C.A', '42-Panadería y Pasteleria', 'c1'),
+(893, 296, 0, '516275', 'V', '102235645', 'FREDDY JOSE LOPEZ BELLO', '42-Panadería y Pasteleria', 'c1'),
+(894, 296, 0, '383404', 'J', '403833281', 'Abasto y Panaderia Don Tadeo,C.A', '42-Panadería y Pasteleria', 'c1'),
+(895, 296, 0, '48052', 'J', '294332196', 'DELIC. Y PANIF. SAN JOSE, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(896, 296, 0, '447634', 'V', '94545893', 'PANADERIA RODRIGUEZ', '42-Panadería y Pasteleria', 'c1'),
+(897, 296, 0, '447038', 'J', '407811193', 'BODEGON PANADERIA Y PASTELERIA MISTER MOISO C.A.', '42-Panadería y Pasteleria', 'c1'),
+(898, 296, 0, '97543', 'J', '302078130', 'PANADERIA VIRGEN DEL VALLE', '42-Panadería y Pasteleria', 'c1'),
+(899, 296, 0, '447042', 'V', '246896670', 'Inversiones Jehova Jireh Rodriguez, F.C', '42-Panadería y Pasteleria', 'c1'),
+(900, 296, 0, '448661', 'V', '162561169', 'Yanneidiz Cakes, F.C.', '42-Panadería y Pasteleria', 'c1'),
+(901, 296, 0, '447066', 'V', '152437265', 'Inversiones Marianny Marin, F.C', '42-Panadería y Pasteleria', 'c1'),
+(902, 296, 0, '447034', 'V', '145808126', 'Panaderia pasteleria y charcuteria Delicias Don Miguel', '42-Panadería y Pasteleria', 'c1'),
+(903, 296, 0, '448295', 'V', '141742252', 'Abasto y Panaderia CJ Alvarez, F.C', '42-Panadería y Pasteleria', 'c1'),
+(904, 296, 0, '447190', 'V', '150445201', 'Panaderia Silvestre Pan, F.C', '42-Panadería y Pasteleria', 'c1'),
+(905, 296, 0, '447205', 'V', '110050808', 'Jehova Mi Sustentador Victor Rodriguez, F.C', '42-Panadería y Pasteleria', 'c1'),
+(906, 296, 0, '209590', 'J', '404128417', 'Panadería y Charcutería la Dirección de Dios CA.', '42-Panadería y Pasteleria', 'c1'),
+(907, 297, 0, '434652', 'V', '148557388', 'Inversiones Guzman', '42-Panadería y Pasteleria', 'c1'),
+(908, 297, 0, '431188', 'V', '141711957', 'PANADERIA CARLOS ALBERTO', '42-Panadería y Pasteleria', 'c1'),
+(909, 297, 0, '199657', 'J', '404078002', 'PANADERIA Y PASTELERIA DCARLOS C.A.', '42-Panadería y Pasteleria', 'c1'),
+(910, 297, 0, '215200', 'V', '84275995', 'Panaderia Mis Hijos de Julio Montes', '42-Panadería y Pasteleria', 'c1'),
+(911, 297, 0, '217868', 'J', '400739586', 'PANADERIA Y PASTELERIA ANMARITA C.A.', '42-Panadería y Pasteleria', 'c1'),
+(912, 297, 0, '387573', 'J', '400739586', 'PANADERIA Y PASTELERIA ANMARITA C.A.', '42-Panadería y Pasteleria', 'c1'),
+(913, 297, 0, '384399', 'J', '405185520', 'Panificadora y Pasteleria Cm Ca', '42-Panadería y Pasteleria', 'c1'),
+(914, 300, 0, '180200', 'J', '317619285', 'panaderia pasteleria y charcuteria la gran victoria ca', '42-Panadería y Pasteleria', 'c1'),
+(915, 300, 0, '214386', 'J', '308318108', 'CAFE,BAR RESTAURANT SPIZZICO, C.A', '42-Panadería y Pasteleria', 'c1'),
+(916, 300, 0, '98423', 'V', '102180204', 'MATA GONZALEZ LUIS JOSE PANADERIA FEL-LUI', '42-Panadería y Pasteleria', 'c1'),
+(917, 300, 0, '142674', 'J', '317033523', 'Conveniencias 24 Horas CA', '42-Panadería y Pasteleria', 'c1'),
+(918, 300, 0, '97492', 'J', '310062749', 'panaderia santisima trinidad c a', '42-Panadería y Pasteleria', 'c1'),
+(919, 300, 0, '40917', 'J', '311642552', 'PANADERIA Y DULCERIA LA CRIOLLA', '42-Panadería y Pasteleria', 'c1'),
+(920, 300, 0, '178221', 'J', '401361013', 'Panaderia pasteleria y charcuteria YESI-PAN CA', '42-Panadería y Pasteleria', 'c1'),
+(921, 300, 0, '101248', 'J', '296866708', 'EXQUISITESES DEL PAN SANTA BARBARA CA', '42-Panadería y Pasteleria', 'c1'),
+(922, 300, 0, '199477', 'V', '59097110', 'Dulceria la gran chiquita', '42-Panadería y Pasteleria', 'c1'),
+(923, 300, 0, '488719', 'V', '102192059', 'JOHNNY JOSE MUNOZ TOVAR', '42-Panadería y Pasteleria', 'c1'),
+(924, 300, 0, '97713', 'V', '132753357', 'JOSE GREGORIO SUNIAGA PANADERIA NJM SUNIAGA', '42-Panadería y Pasteleria', 'c1'),
+(925, 300, 0, '137966', 'V', '108797270', 'INVERSIONES  HURTADO  PANADERIA  Y  VIVERES  EN  GENERAL', '42-Panadería y Pasteleria', 'c1'),
+(926, 300, 0, '139332', 'J', '401122884', 'PANADERIA Y PASTELERIA EL LIRIO JW CA', '42-Panadería y Pasteleria', 'c1'),
+(927, 300, 0, '155418', 'J', '400630037', 'LA ESPIGA DE TACA CA', '42-Panadería y Pasteleria', 'c1'),
+(928, 300, 0, '471229', 'V', '31353927', 'SULPICIO ANTONIO SUNIAGA', '42-Panadería y Pasteleria', 'c1'),
+(929, 300, 0, '97876', 'V', '49441050', 'PANADERIA ANGELITO', '42-Panadería y Pasteleria', 'c1'),
+(930, 300, 0, '110147', 'J', '293944635', 'PANADERIA Y PASTELERIA SUCRE', '42-Panadería y Pasteleria', 'c1'),
+(931, 300, 0, '118900', 'J', '313327964', 'COOPERATIVA MARILEN 14544, R.L', '42-Panadería y Pasteleria', 'c1'),
+(932, 300, 0, '492278', 'J', '405426144', 'INVERSIONES MR C.A.', '42-Panadería y Pasteleria', 'c1'),
+(933, 300, 0, '198285', 'J', '403177902', 'Panaderia y Pasteleria Perimetral 2013,C.A', '42-Panadería y Pasteleria', 'c1'),
+(934, 300, 0, '507307', 'J', '404503080', 'EXQUISITECES MI FE C.A.', '42-Panadería y Pasteleria', 'c1'),
+(935, 300, 0, '474429', 'J', '407500082', 'EXQUISITECES VALENTINA, C.A', '42-Panadería y Pasteleria', 'c1'),
+(936, 300, 0, '117387', 'V', '179555804', 'Wilmer Rafael Marin Jaramillo- Pasteleria Wilmer Marin', '42-Panadería y Pasteleria', 'c1'),
+(937, 300, 0, '177414', 'V', '102238164', 'COMERCIAL SAN MIGUEL 55 RL', '42-Panadería y Pasteleria', 'c1'),
+(938, 300, 0, '483145', 'J', '404801448', 'PANADERIA Y PASTELERIA HERMANOS GONZLAEZ, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(939, 300, 0, '89284', 'J', '297722211', 'PAND PAST LIBERTAD CA', '42-Panadería y Pasteleria', 'c1'),
+(940, 300, 0, '487704', 'J', '408872595', 'ASOCIACIÓN CIVIL PANADEROS, PASTELEROS Y CONFITEROS DE BERMUDEZ DONDE PODER ES QUERER', '42-Panadería y Pasteleria', 'c1'),
+(941, 300, 0, '217227', 'V', '182142200', 'LUNCHERIA LOS ANGELES - DE NINO ANGEL DEL MELA PAGANO', '42-Panadería y Pasteleria', 'c1'),
+(942, 300, 0, '513798', 'V', '170214877', 'el rey del tequeno', '42-Panadería y Pasteleria', 'c1'),
+(943, 300, 0, '198122', 'V', '86476149', 'RAMOS B.,JUAN Y/O PANADERIA LA MARIA', '42-Panadería y Pasteleria', 'c1'),
+(944, 300, 0, '36057', 'J', '304496087', 'CENTRO CHACECA, C.A. Suc Carupano', '42-Panadería y Pasteleria', 'c1'),
+(945, 300, 0, '199215', 'J', '401262481', 'PANADERÍA PASTELERÍA Y CONVENIENCIAS MI PAN, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(946, 300, 0, '436409', 'V', '48538602', 'COMERCIAL SARA', '42-Panadería y Pasteleria', 'c1'),
+(947, 300, 0, '97854', 'V', '31361890', 'CARLOS JESUS  MENDEZ', '42-Panadería y Pasteleria', 'c1'),
+(948, 300, 0, '3424', 'V', '86476149', 'RAMOS B., JUAN Y/O PANADERIA LA MARIA', '42-Panadería y Pasteleria', 'c1'),
+(949, 300, 0, '513804', 'V', '118365042', 'El buen sabor de ozuna', '42-Panadería y Pasteleria', 'c1'),
+(950, 300, 0, '164289', 'J', '402726813', 'PANADERIA MI PARADA CA', '42-Panadería y Pasteleria', 'c1'),
+(951, 300, 0, '185446', 'V', '122914018', 'Inversiones Javier Rafael Arcia Millan', '42-Panadería y Pasteleria', 'c1'),
+(952, 300, 0, '135921', 'J', '400592623', 'Panificadora Angelito ca', '42-Panadería y Pasteleria', 'c1'),
+(953, 300, 0, '390103', 'J', '405684887', 'SERVI-PAN C.A', '42-Panadería y Pasteleria', 'c1'),
+(954, 300, 0, '485272', 'J', '403813094', 'PANADERIA Y ABASTOS RIRA, C.A', '42-Panadería y Pasteleria', 'c1'),
+(955, 300, 0, '485411', 'J', '408646200', 'exquisiteces y delicateses mezclados rosal', '42-Panadería y Pasteleria', 'c1'),
+(956, 300, 0, '455836', 'V', '40833656', 'Festin Luis Cafe', '42-Panadería y Pasteleria', 'c1'),
+(957, 300, 0, '20855', 'V', '82899010', 'PANAERIA MARISOL CORAZON DE JESUS MARISOL HERNANDEZ C', '42-Panadería y Pasteleria', 'c1'),
+(958, 300, 0, '152616', 'J', '401893325', 'Panaderia y Exquisiteces Libertad c a', '42-Panadería y Pasteleria', 'c1'),
+(959, 300, 0, '513947', 'V', '133856125', 'JHONNY DIOMAR CELIS FUENTES', '42-Panadería y Pasteleria', 'c1'),
+(960, 300, 0, '2769', 'J', '80234855', 'PANAD PAST CAFET. LA BOLIVARIANA,S.R.L', '42-Panadería y Pasteleria', 'c1'),
+(961, 300, 0, '498934', 'V', '102183076', 'inversiones de ney', '42-Panadería y Pasteleria', 'c1'),
+(962, 300, 0, '442118', 'V', '151134749', 'PANADERIA Y PASTELERIA MARTINEZ', '42-Panadería y Pasteleria', 'c1'),
+(963, 300, 0, '33737', 'J', '80306872', 'PANIFICADORA VENEZOLANA CA', '42-Panadería y Pasteleria', 'c1'),
+(964, 300, 0, '440298', 'J', '80074980', 'panaderia y pasteleria la flor de carupano, c.a', '42-Panadería y Pasteleria', 'c1'),
+(965, 300, 0, '439147', 'V', '102198421', 'Inversiones Jose Luis Martinez', '42-Panadería y Pasteleria', 'c1'),
+(966, 300, 0, '180677', 'V', '144222322', 'panadería y pasteleria arcia', '42-Panadería y Pasteleria', 'c1'),
+(967, 300, 0, '391472', 'J', '405358815', 'BACHA SNACK, C.A', '42-Panadería y Pasteleria', 'c1'),
+(968, 300, 0, '3109', 'J', '80258215', 'PANADERIA Y PASTELERIA LA CARUPANERA,C.A', '42-Panadería y Pasteleria', 'c1'),
+(969, 300, 0, '98273', 'V', '132735146', 'PETRA MARIA LOPEZ COMERCIAL LOPEZ', '42-Panadería y Pasteleria', 'c1'),
+(970, 300, 0, '215259', 'J', '401495834', 'kilomania express, c.a', '42-Panadería y Pasteleria', 'c1'),
+(971, 300, 0, '433676', 'J', '401122884', 'PANADERIA Y PASTELERIA EL LIRIO JW CA', '42-Panadería y Pasteleria', 'c1'),
+(972, 300, 0, '97689', 'J', '294328296', 'Panaderia y Pasteleria El Triunfo CA', '42-Panadería y Pasteleria', 'c1'),
+(973, 300, 0, '180185', 'J', '400956404', 'inversiones tarazona ca', '42-Panadería y Pasteleria', 'c1'),
+(974, 300, 0, '431467', 'V', '92013932', 'Heladeria y pasteleria La Nota de Blas', '42-Panadería y Pasteleria', 'c1'),
+(975, 300, 0, '498142', 'V', '247538468', 'PANADERIA Y PASTELERIA LA PARIANA DE ISABELLA AGUILERA', '42-Panadería y Pasteleria', 'c1'),
+(976, 300, 0, '185434', 'V', '69585570', 'panaderia el caro', '42-Panadería y Pasteleria', 'c1'),
+(977, 300, 0, '94257', 'J', '299135011', 'PANADERIA EL TREBOL C.A', '42-Panadería y Pasteleria', 'c1'),
+(978, 300, 0, '457178', 'J', '404503080', 'EXQUISITECES MI FE C.A.', '42-Panadería y Pasteleria', 'c1'),
+(979, 300, 0, '116777', 'J', '316866971', 'COOPERATIVA SABOR VENEZOLANO DE CARUPANO SU2 RL', '42-Panadería y Pasteleria', 'c1'),
+(980, 300, 0, '214238', 'J', '401536239', 'PANADERIA Y PASTELERIA CESAR, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(981, 300, 0, '225643', 'J', '404952276', 'Panaderia y Pasteleria Miranda', '42-Panadería y Pasteleria', 'c1'),
+(982, 300, 0, '467373', 'J', '408333066', 'PANADERIA, PASTELERIA Y CHARCUTERIA KAMILA ISABEL, C.A', '42-Panadería y Pasteleria', 'c1'),
+(983, 300, 0, '517072', 'V', '157876550', 'Panaderia y Dulceria Kelly', '42-Panadería y Pasteleria', 'c1'),
+(984, 300, 0, '517069', 'V', '261189476', 'Panaderia y Pasteleria Don Cristian', '42-Panadería y Pasteleria', 'c1'),
+(985, 300, 0, '425653', 'J', '407063499', 'MUCHYS CAFE, C.A', '42-Panadería y Pasteleria', 'c1'),
+(986, 300, 0, '261393', 'J', '405092513', 'LA SENORA DE LAS TORTAS CARUPANO C.A', '42-Panadería y Pasteleria', 'c1'),
+(987, 300, 0, '486302', 'V', '158838768', 'SANDY DEL VALLE LONGART MAIZ', '42-Panadería y Pasteleria', 'c1'),
+(988, 300, 0, '499100', 'V', '154148562', 'Panaderia y Pasteleria Machado', '42-Panadería y Pasteleria', 'c1'),
+(989, 300, 0, '509661', 'V', '139231887', 'INVERSIONES BRITO', '42-Panadería y Pasteleria', 'c1'),
+(990, 300, 0, '184442', 'V', '94586999', 'panaderia', '42-Panadería y Pasteleria', 'c1'),
+(991, 300, 0, '519102', 'V', '158823523', 'panaderia de humberto espinoza', '42-Panadería y Pasteleria', 'c1'),
+(992, 300, 0, '518522', 'V', '157873772', 'INVERSIONES NIURKA J.M.', '42-Panadería y Pasteleria', 'c1'),
+(993, 300, 0, '459819', 'J', '408034301', 'LAURA MASTER CAKE, C.A', '42-Panadería y Pasteleria', 'c1'),
+(994, 300, 0, '179798', 'J', '402737149', 'panaderia nuestra señora del valle', '42-Panadería y Pasteleria', 'c1'),
+(995, 300, 0, '521532', 'V', '142911864', 'Inversiones jairo gonzales C.A', '42-Panadería y Pasteleria', 'c1'),
+(996, 300, 0, '99733', 'J', '298708468', 'PANADERIA Y PASTELERIA LA VICTORIA CA', '42-Panadería y Pasteleria', 'c1'),
+(997, 300, 0, '175401', 'V', '42988746', 'exquisiteces challa', '42-Panadería y Pasteleria', 'c1'),
+(998, 300, 0, '521530', 'V', '152430805', 'inversiones solorzano c.a', '42-Panadería y Pasteleria', 'c1'),
+(999, 300, 0, '202252', 'J', '400600650', 'Panaderia y Pasteleria Sol de Oriente C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1000, 300, 0, '192714', 'J', '400739462', 'inversiones el pan ardiente, c.a', '42-Panadería y Pasteleria', 'c1'),
+(1001, 300, 0, '202262', 'J', '400356539', 'Panaderia Pasteleria y Charcuteria MARINMOROS, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1002, 300, 0, '96380', 'J', '80234855', 'panaderia y pasteleria la bolivariana ca', '42-Panadería y Pasteleria', 'c1'),
+(1003, 300, 0, '513850', 'V', '166270940', 'Carlos dulce mil bendiciones', '42-Panadería y Pasteleria', 'c1'),
+(1004, 300, 0, '493105', 'V', '191907201', 'Panaderia y Pasteleria Angel Farias', '42-Panadería y Pasteleria', 'c1'),
+(1005, 300, 0, '517127', 'V', '152435432', 'PAN PAN DE MIS DOS HIJOS DE JORGE MOYA', '42-Panadería y Pasteleria', 'c1'),
+(1006, 300, 0, '247389', 'J', '403190011', 'PANADERA Y PASTELERA DR JOSE GREGORIO HERNANDEZ C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1007, 300, 0, '511973', 'V', '102164241', 'Panaderia y Pasteleria Salazar Dios es Amor', '42-Panadería y Pasteleria', 'c1'),
+(1008, 300, 0, '516114', 'V', '58644451', 'inversionescarmen vasquez c.a', '42-Panadería y Pasteleria', 'c1'),
+(1009, 300, 0, '486249', 'V', '94538528', 'panaderia mi princesa arcia', '42-Panadería y Pasteleria', 'c1'),
+(1010, 300, 0, '179840', 'V', '102178420', 'ARTESANO', '42-Panadería y Pasteleria', 'c1'),
+(1011, 300, 0, '3128', 'J', '301917154', 'LA MANSION DEL PAN, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1012, 300, 0, '110150', 'J', '80074980', 'Panaderia y Pasteleria la flor de carupano CA', '42-Panadería y Pasteleria', 'c1'),
+(1013, 300, 0, '471209', 'J', '297669175', 'INVERSIONES VARGAS CARABALLO C.A', '42-Panadería y Pasteleria', 'c1'),
+(1014, 300, 0, '140128', 'J', '401032443', 'PANADERIA Y CHARCUTERIA CITY PAN C.A', '42-Panadería y Pasteleria', 'c1'),
+(1015, 300, 0, '513852', 'V', '197360050', 'Inversiones alimento saraysth', '42-Panadería y Pasteleria', 'c1'),
+(1016, 300, 0, '515398', 'V', '139233634', 'gollas marcano', '42-Panadería y Pasteleria', 'c1'),
+(1017, 300, 0, '513728', 'J', '404801448', 'Panaderia y Pasteleria Hermanos Gonzalez', '42-Panadería y Pasteleria', 'c1'),
+(1018, 300, 0, '223629', 'J', '304071787', 'LA COROMOTO II S.R.L.', '42-Panadería y Pasteleria', 'c1'),
+(1019, 300, 0, '176830', 'J', '402678363', 'PIZZERIA Y HELADERIA LA POPO III CA', '42-Panadería y Pasteleria', 'c1'),
+(1020, 300, 0, '117415', 'V', '58571306', 'panaderia virgen del carmen', '42-Panadería y Pasteleria', 'c1'),
+(1021, 300, 0, '389009', 'V', '203756212', 'mezclados rosal 2015', '42-Panadería y Pasteleria', 'c1'),
+(1022, 300, 0, '387820', 'J', '405765305', 'asociacion civil panaderos artesanales y medianos comerciantes del municipio bermudez del estado sucre ASOPARMES', '42-Panadería y Pasteleria', 'c1'),
+(1023, 300, 0, '4136', 'J', '308899321', 'PANADERIA LOS MOLINOS, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1024, 300, 0, '242446', 'V', '132742916', 'Panaderia, pasteleria y charcuteria Vizcaino', '42-Panadería y Pasteleria', 'c1'),
+(1025, 300, 0, '117410', 'J', '307252278', 'Panaderia Pasteleria y Charcuteria MARIGLAISA CA', '42-Panadería y Pasteleria', 'c1'),
+(1026, 300, 0, '261838', 'J', '405092513', 'la senora de las tortas carupano, c.a.', '42-Panadería y Pasteleria', 'c1'),
+(1027, 300, 0, '494966', 'J', '296012580', 'Panaderia y Pasteleria El Trigo, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1028, 300, 0, '377608', 'J', '297669175', 'inversiones vargas caraballo C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1029, 300, 0, '192031', 'V', '168573029', 'panaderia y pasteleria mi dulce familia', '42-Panadería y Pasteleria', 'c1'),
+(1030, 300, 0, '504394', 'V', '58757760', 'WILMAN JOSE VICENT MATA', '42-Panadería y Pasteleria', 'c1'),
+(1031, 300, 0, '504803', 'V', '94551737', 'PANADERIA LA REBANCHA', '42-Panadería y Pasteleria', 'c1'),
+(1032, 300, 0, '98251', 'J', '298443324', 'Panaderia  Pasteleria y Delicateses Rico Pan CA', '42-Panadería y Pasteleria', 'c1'),
+(1033, 300, 0, '392345', 'J', '406313742', 'Panaderia, Pasteleria y Charcuteria La Estacion, C.A', '42-Panadería y Pasteleria', 'c1'),
+(1034, 300, 0, '9802', 'J', '308722464', 'PANADERIA ALBERT', '42-Panadería y Pasteleria', 'c1'),
+(1035, 300, 0, '495791', 'V', '151142164', 'PANADERIA Y PASTELERIA CARLOS SIFONTES', '42-Panadería y Pasteleria', 'c1'),
+(1036, 300, 0, '98841', 'J', '294328296', 'PANADERIA Y PASTELERIA EL TRIUNFO CA', '42-Panadería y Pasteleria', 'c1'),
+(1037, 300, 0, '382002', 'V', '94538528', 'PANADERIA MI PRINCESA ARCIA', '42-Panadería y Pasteleria', 'c1'),
+(1038, 300, 0, '94222', 'J', '305186405', 'PANADERIA PAST CHAR Y DELI VIRGEN DEL VALLE CA', '42-Panadería y Pasteleria', 'c1'),
+(1039, 300, 0, '140107', 'J', '401361013', 'PANADERIA, PASTELERIA Y CHARCUTERIA YESI-PAN C.A', '42-Panadería y Pasteleria', 'c1'),
+(1040, 300, 0, '220474', 'V', '182142200', 'LUNCHERIA LOS ANGELES', '42-Panadería y Pasteleria', 'c1'),
+(1041, 300, 0, '166151', 'V', '148552300', 'PANADERIA Y PASTELERIA GONZALEZ FP', '42-Panadería y Pasteleria', 'c1'),
+(1042, 300, 0, '203727', 'V', '102192059', 'Inversiones J.J. Munoz', '42-Panadería y Pasteleria', 'c1'),
+(1043, 300, 0, '508249', 'V', '111853599', 'PANADERIA CERVANTES RICO PAN', '42-Panadería y Pasteleria', 'c1'),
+(1044, 300, 0, '432064', 'V', '154147213', 'INVERSIONES LEONARDO', '42-Panadería y Pasteleria', 'c1'),
+(1045, 300, 0, '217264', 'V', '203743846', 'Dios es Amor', '42-Panadería y Pasteleria', 'c1'),
+(1046, 300, 0, '116013', 'V', '86476149', 'RAMOS B JUAN Y O PANADERIA LA MARIA', '42-Panadería y Pasteleria', 'c1'),
+(1047, 300, 0, '218736', 'J', '404428364', 'INVERSIONES CRISMEL C.A', '42-Panadería y Pasteleria', 'c1'),
+(1048, 300, 0, '183667', 'J', '308318108', 'cafe bar restaurant spizzico ca', '42-Panadería y Pasteleria', 'c1'),
+(1049, 300, 0, '139411', 'J', '294328296', 'PANADERIA PAST EL TRIUNFO C A', '42-Panadería y Pasteleria', 'c1'),
+(1050, 300, 0, '175003', 'J', '400739462', 'INVERSIONES EL PAN ARDIENTE CA', '42-Panadería y Pasteleria', 'c1'),
+(1051, 300, 0, '99178', 'V', '82899010', 'PANADERIA MARISOL CORAZON DE JESUS', '42-Panadería y Pasteleria', 'c1'),
+(1052, 300, 0, '117646', 'V', '69585570', 'Panaderia El Caro', '42-Panadería y Pasteleria', 'c1'),
+(1053, 300, 0, '98584', 'E', '819087540', 'PANADERIA Y CHARCUTERIA TARAZONA LA ESPECIAL', '42-Panadería y Pasteleria', 'c1'),
+(1054, 300, 0, '3553', 'J', '307252278', 'PAND. PAST. Y CHARCT. MARIGLAISA, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1055, 300, 0, '98276', 'V', '42988746', 'EXQUISITESES CHALLA', '42-Panadería y Pasteleria', 'c1'),
+(1056, 300, 0, '113173', 'J', '299220000', 'PANADERIA LA ESPIGA DORADA CA', '42-Panadería y Pasteleria', 'c1'),
+(1057, 300, 0, '141143', 'J', '298443324', 'Panaderia pasteleria y delicatesses Rico Pan ca', '42-Panadería y Pasteleria', 'c1'),
+(1058, 300, 0, '99379', 'J', '313244260', 'PANADERIA Y CONVENIENCIAS SUNIAGA CA', '42-Panadería y Pasteleria', 'c1'),
+(1059, 300, 0, '96381', 'J', '300984397', 'PANIFICADORA PANDORA CA', '42-Panadería y Pasteleria', 'c1'),
+(1060, 300, 0, '481940', 'J', '408083019', 'bodegon y panaderia el patron', '42-Panadería y Pasteleria', 'c1'),
+(1061, 303, 0, '382539', 'J', '299216607', 'PANADERIA, PASTELERIA Y CHARCUTERIA ELEGUA Y SUS AMIGOS, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1062, 303, 0, '469150', 'J', '310838313', 'Panaderia y Pasteleria Mi Pan Criollo, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1063, 303, 0, '218590', 'J', '404492534', 'Panadería, Pastelería y Charcutería Andy C.A', '42-Panadería y Pasteleria', 'c1'),
+(1064, 303, 0, '379013', 'J', '405373938', 'PANADERIA MIS LUCEROS C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1065, 303, 0, '211342', 'J', '310838313', 'PAND PAST MI PAN CRIOLLO, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1066, 303, 0, '110539', 'J', '80288718', 'MERCANTIL VELOSO, S.R.L.', '42-Panadería y Pasteleria', 'c1'),
+(1067, 303, 0, '27603', 'J', '307264870', 'PANADERIA Y CHARCUTERIA ARAYA CA', '42-Panadería y Pasteleria', 'c1'),
+(1068, 303, 0, '414859', 'J', '406124923', 'COMERCIALIZADORA DON ANDRES C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1069, 303, 0, '164333', 'V', '126605168', 'pan artesanal', '42-Panadería y Pasteleria', 'c1'),
+(1070, 303, 0, '176283', 'J', '315792451', 'panaderia y pasteleria hugo', '42-Panadería y Pasteleria', 'c1'),
+(1071, 303, 0, '224392', 'J', '299216607', 'PANADERIA,PASTELERIA Y CHARCUTERIA ELEGUA Y SUS AMIGOS, C.A', '42-Panadería y Pasteleria', 'c1'),
+(1072, 303, 0, '489502', 'V', '145975022', 'LA GRAN PIRAMIDE GARCIA PEREZ', '42-Panadería y Pasteleria', 'c1'),
+(1073, 303, 0, '438985', 'V', '83234810', 'Panaderia Andremar Salazar', '42-Panadería y Pasteleria', 'c1'),
+(1074, 303, 0, '177223', 'V', '83234810', 'PANADERIA ANDREMAR SALAZAR', '42-Panadería y Pasteleria', 'c1'),
+(1075, 303, 0, '200032', 'J', '213234265', 'Mis hijas de Ronny Aguilera', '42-Panadería y Pasteleria', 'c1'),
+(1076, 303, 0, '499849', 'J', '409174050', 'PANADERIA JULIBEL', '42-Panadería y Pasteleria', 'c1'),
+(1077, 303, 0, '139223', 'J', '400112729', 'SUPERMERCADO PANADERIA SOCIALISTA CASTILLO DE ORIENTE, C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1078, 303, 0, '203124', 'V', '189050069', 'PANADERIA Y PASTELERIA CALETH VILLARROEL', '42-Panadería y Pasteleria', 'c1'),
+(1079, 303, 0, '35762', 'J', '314530461', 'MINI PANADERIA MANICUARE CA', '42-Panadería y Pasteleria', 'c1'),
+(1080, 308, 0, '181616', 'V', '43010839', 'hector luis sanchez rodriguez', '42-Panadería y Pasteleria', 'c1'),
+(1081, 308, 0, '97666', 'J', '298591579', 'EL PLACER GOURMET C A', '42-Panadería y Pasteleria', 'c1'),
+(1082, 308, 0, '96991', 'J', '308713449', 'Variedades Lusitana CA', '42-Panadería y Pasteleria', 'c1'),
+(1083, 308, 0, '123286', 'V', '43009504', 'PANADERIA KIKA', '42-Panadería y Pasteleria', 'c1'),
+(1084, 308, 0, '520459', 'J', '408586444', 'Panaderia Don Pedro ALPE C.A', '42-Panadería y Pasteleria', 'c1'),
+(1085, 308, 0, '229566', 'J', '298591579', 'el placer gourmet c.a', '42-Panadería y Pasteleria', 'c1'),
+(1086, 308, 0, '183514', 'V', '43010839', 'panaderia pasteleria y charcuteria la casdel pan', '42-Panadería y Pasteleria', 'c1'),
+(1087, 308, 0, '115210', 'J', '310924953', 'PANADERIA,PASTELERIA Y CHARCUTERIA SANTA BARBARA BENDITA C.A', '42-Panadería y Pasteleria', 'c1'),
+(1088, 308, 0, '230857', 'J', '405160314', 'PANADERIA Y PASTELERIA LA GRACIA DE DIOS', '42-Panadería y Pasteleria', 'c1'),
+(1089, 308, 0, '466358', 'J', '403515492', 'INVERSIONES PANADERIA Y PASTELERIA TU Y YO P.B.M.C', '42-Panadería y Pasteleria', 'c1'),
+(1090, 308, 0, '454448', 'V', '84340797', 'panaderia y pasteleria la moderna', '42-Panadería y Pasteleria', 'c1'),
+(1091, 308, 0, '96931', 'J', '298435160', 'Panaderia Pasteleria y Charcuteria 1 de Mayo CA', '42-Panadería y Pasteleria', 'c1'),
+(1092, 308, 0, '116393', 'J', '296760675', 'INVERSIONES RIO DE ORO 1404, C.A', '42-Panadería y Pasteleria', 'c1'),
+(1093, 308, 0, '381376', 'J', '405118008', 'panaderia  y  exquisiteces el mundo del pan', '42-Panadería y Pasteleria', 'c1'),
+(1094, 308, 0, '416335', 'J', '403515492', 'INVERCIONES  PANADERIA Y PASTELERIA TU Y YO P.B.M.C.C.A', '42-Panadería y Pasteleria', 'c1'),
+(1095, 308, 0, '237584', 'J', '405186470', 'PANADERIA Y PASTELERIA VALLE VERDE JJ, C.A', '42-Panadería y Pasteleria', 'c1'),
+(1096, 308, 0, '118241', 'V', '167239737', 'comercial medardo peña', '42-Panadería y Pasteleria', 'c1'),
+(1097, 308, 0, '227220', 'J', '403688427', 'PANADERIA PASTELERIA Y PIZZERIA RONY C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1098, 308, 0, '492721', 'J', '409108481', 'PANIFICADORA PANADERIA Y PASTELERIA JJ C.A.', '42-Panadería y Pasteleria', 'c1'),
+(1099, 308, 0, '158506', 'J', '402369166', 'DELICATECES PLAZA CA', '42-Panadería y Pasteleria', 'c1'),
+(1100, 308, 0, '215242', 'J', '401897762', 'panaderia pasteleria y charcuteria la delicia, c.a', '42-Panadería y Pasteleria', 'c1'),
+(1101, 308, 0, '506393', 'J', '403688427', 'panaderia pasteleria y pizzeria rony ca', '42-Panadería y Pasteleria', 'c1'),
+(1102, 308, 0, '377357', 'J', '405888547', 'prestigio oriental c.a', '42-Panadería y Pasteleria', 'c1'),
+(1103, 308, 0, '422047', 'V', '132730659', 'el mundo de las galletas', '42-Panadería y Pasteleria', 'c1'),
+(1104, 296, 0, '166397', 'J', '294332196', 'DELICATECES Y PANIFICADORA SAN JOSE CA', '62-Panificadoras', 'c1'),
+(1105, 300, 0, '481122', 'J', '403153183', 'PANIFICADORA CEDRO EL LIBANO, C.A.', '62-Panificadoras', 'c1'),
+(1106, 300, 0, '481126', 'J', '403153183', 'PANIFICADORA CEDRO DEL LIBANO, C.A.', '62-Panificadoras', 'c1'),
+(1107, 300, 0, '388802', 'J', '405832460', 'Panificadora Halabi C A', '62-Panificadoras', 'c1'),
+(1108, 300, 0, '161980', 'V', '58625180', 'PANADERIA LA FLOR DEL LIRIO', '62-Panificadoras', 'c1'),
+(1109, 300, 0, '460433', 'J', '403153183', 'panificadora cedro del libano c.a', '62-Panificadoras', 'c1'),
+(1110, 300, 0, '139479', 'V', '193152917', 'gabriel velasquez', '62-Panificadoras', 'c1'),
+(1111, 300, 0, '411791', 'J', '405028416', 'EL REY DE LA FIESTA C.A', '62-Panificadoras', 'c1'),
+(1112, 300, 0, '180202', 'J', '40353183', 'panificadora cedro del libano ca', '62-Panificadoras', 'c1'),
+(1113, 300, 0, '182018', 'V', '94586999', 'inversiones ramirez caballero', '62-Panificadoras', 'c1'),
+(1114, 300, 0, '379491', 'J', '405832460', 'PANIFICADORA HALABI, C.A', '62-Panificadoras', 'c1'),
+(1115, 300, 0, '235002', 'J', '405028416', 'El Rey de las Fiestas, C.A', '62-Panificadoras', 'c1'),
+(1116, 303, 0, '457539', 'J', '408035138', 'unidad productiva familiar panificadora punta arena', '62-Panificadoras', 'c1'),
+(1117, 296, 0, '481199', 'V', '153450958', 'Aliber Leon', '75-Panaderías Comunales CLAP', 'c1'),
+(1118, 296, 0, '481197', 'V', '158824090', 'Mariledys Tovar', '75-Panaderías Comunales CLAP', 'c1'),
+(1119, 296, 0, '480988', 'V', '140645440', 'Naudys Jose', '75-Panaderías Comunales CLAP', 'c1'),
+(1120, 296, 0, '447026', 'V', '174062737', 'chande rodrigues', '75-Panaderías Comunales CLAP', 'c1'),
+(1121, 296, 0, '510683', 'V', '142914375', 'PANADERIA ARTESANAL JOHN VASQUEZ', '75-Panaderías Comunales CLAP', 'c1'),
+(1122, 296, 0, '505087', 'V', '122880598', '424-13201', '75-Panaderías Comunales CLAP', 'c1'),
+(1123, 296, 0, '473189', 'J', '408295504', 'INVENCIONES PANDERIA GARCIA C.A', '75-Panaderías Comunales CLAP', 'c1'),
+(1124, 296, 0, '483035', 'V', '179577271', 'panaderia y charcuteria artesanal EL MANA', '75-Panaderías Comunales CLAP', 'c1'),
+(1125, 296, 0, '480826', 'V', '176222731', 'Belkaris Tovar', '75-Panaderías Comunales CLAP', 'c1'),
+(1126, 296, 0, '480801', 'V', '55572654', 'Tirzo Jose Leon', '75-Panaderías Comunales CLAP', 'c1'),
+(1127, 296, 0, '474830', 'V', '158352172', '158352172', '75-Panaderías Comunales CLAP', 'c1'),
+(1128, 296, 0, '447586', 'V', '119681444', 'Cesar velasquez', '75-Panaderías Comunales CLAP', 'c1'),
+(1129, 300, 0, '447045', 'V', '102219623', 'panaderia carlos peralta', '75-Panaderías Comunales CLAP', 'c1'),
+(1130, 300, 0, '480920', 'V', '63990112', 'El chipilin', '75-Panaderías Comunales CLAP', 'c1'),
+(1131, 300, 0, '513802', 'V', '132537018', 'Panaderia Nuestro Esfuerzo', '75-Panaderías Comunales CLAP', 'c1'),
+(1132, 300, 0, '513810', 'V', '185903776', 'Panaderia Inversiones Natera', '75-Panaderías Comunales CLAP', 'c1'),
+(1133, 300, 0, '498918', 'V', '71253291', 'PANADERÍA PASTELERÍA MENDOZA', '75-Panaderías Comunales CLAP', 'c1'),
+(1134, 300, 0, '498980', 'V', '82572712', 'Panaderia Juan Jose', '75-Panaderías Comunales CLAP', 'c1'),
+(1135, 300, 0, '498972', 'V', '167775116', 'Obleas Maryerlin', '75-Panaderías Comunales CLAP', 'c1'),
+(1136, 300, 0, '515491', 'V', '177795646', 'panaderia manuel', '75-Panaderías Comunales CLAP', 'c1'),
+(1137, 300, 0, '498998', 'V', '125310318', 'Panaderia Misvelida', '75-Panaderías Comunales CLAP', 'c1'),
+(1138, 300, 0, '498945', 'V', '163964348', 'Inversiones Moreno', '75-Panaderías Comunales CLAP', 'c1'),
+(1139, 300, 0, '498906', 'V', '158821083', 'panaderia y dulceria rodruguez', '75-Panaderías Comunales CLAP', 'c1'),
+(1140, 300, 0, '498964', 'V', '58691620', 'Panaderia y Dulceria Yasmin', '75-Panaderías Comunales CLAP', 'c1'),
+(1141, 300, 0, '378417', 'V', '108782958', 'variedades ismael vargas tote', '75-Panaderías Comunales CLAP', 'c1'),
+(1142, 300, 0, '377369', 'V', '108782958', 'inversiones ismael vargas tote', '75-Panaderías Comunales CLAP', 'c1'),
+(1143, 300, 0, '432254', 'V', '108796924', 'dulceria  brito', '75-Panaderías Comunales CLAP', 'c1'),
+(1144, 300, 0, '429813', 'V', '50801159', 'EL PAN VALE DE MARIO', '75-Panaderías Comunales CLAP', 'c1'),
+(1145, 300, 0, '429788', 'V', '176247432', 'el primo amado', '75-Panaderías Comunales CLAP', 'c1'),
+(1146, 300, 0, '499091', 'V', '199082201', 'Inversiones Edwin', '75-Panaderías Comunales CLAP', 'c1'),
+(1147, 300, 0, '511340', 'V', '102216136', 'Bodega y Panadería comunal Inversiones Robles', '75-Panaderías Comunales CLAP', 'c1'),
+(1148, 300, 0, '507597', 'V', '94583671', 'PANADERIA MIGUEL ROSAL', '75-Panaderías Comunales CLAP', 'c1'),
+(1149, 300, 0, '411190', 'J', '404952276', 'Panadería y Pastelería Miranda CA', '75-Panaderías Comunales CLAP', 'c1'),
+(1150, 300, 0, '421913', 'V', '132752393', 'VICMARYS', '75-Panaderías Comunales CLAP', 'c1'),
+(1151, 300, 0, '452951', 'V', '114355182', 'Panadería y Pastelería Dr. Jose Gregorio Hernandez', '75-Panaderías Comunales CLAP', 'c1'),
+(1152, 300, 0, '499015', 'V', '102216470', 'Inversiones Sarahit', '75-Panaderías Comunales CLAP', 'c1'),
+(1153, 300, 0, '492579', 'V', '247537305', 'EL ARTESANO DEL PAN VELASQUEZ', '75-Panaderías Comunales CLAP', 'c1'),
+(1154, 300, 0, '252162', 'V', '94532791', 'luis gutierrez', '75-Panaderías Comunales CLAP', 'c1'),
+(1155, 300, 0, '516593', 'V', '203748244', 'PANADERIA CARLOS RUIZ', '75-Panaderías Comunales CLAP', 'c1'),
+(1156, 300, 0, '217610', 'V', '119746309', 'luis alfredo sanchez labrador', '75-Panaderías Comunales CLAP', 'c1'),
+(1157, 300, 0, '499103', 'V', '94534018', 'Inversiones Nena Jimenez', '75-Panaderías Comunales CLAP', 'c1'),
+(1158, 300, 0, '513855', 'V', '127723199', 'Bodega Gandy batista', '75-Panaderías Comunales CLAP', 'c1'),
+(1159, 300, 0, '495190', 'V', '37602872', 'Mamaia C.A', '75-Panaderías Comunales CLAP', 'c1'),
+(1160, 300, 0, '511385', 'V', '229251844', 'panadería comunal las delicias', '75-Panaderías Comunales CLAP', 'c1'),
+(1161, 300, 0, '376807', 'V', '108782958', 'inversiones Ismael Vargas tote,', '75-Panaderías Comunales CLAP', 'c1'),
+(1162, 300, 0, '514034', 'J', '408231956', 'Panaderia La Flor del lirio C.A', '75-Panaderías Comunales CLAP', 'c1'),
+(1163, 300, 0, '467758', 'V', '141741957', 'Panadería Carlos alberto', '75-Panaderías Comunales CLAP', 'c1'),
+(1164, 300, 0, '247393', 'V', '94532791', 'LUIS HERNAN GUTIERREZ TENIA', '75-Panaderías Comunales CLAP', 'c1'),
+(1165, 300, 0, '501448', 'V', '147168558', 'Inversiones Erika', '75-Panaderías Comunales CLAP', 'c1'),
+(1166, 300, 0, '498903', 'V', '247158797', 'Inversiones Farias', '75-Panaderías Comunales CLAP', 'c1'),
+(1167, 300, 0, '521410', 'V', '114384484', 'panaderia andres ruiz', '75-Panaderías Comunales CLAP', 'c1'),
+(1168, 300, 0, '513879', 'V', '122915944', 'El Delicioso Pan De Mendez', '75-Panaderías Comunales CLAP', 'c1'),
+(1169, 300, 0, '513887', 'V', '114414316', 'panadería artesanal comunitaria inversiones Mendez', '75-Panaderías Comunales CLAP', 'c1'),
+(1170, 303, 0, '495232', 'V', '126652670', 'panaderia virgen del carmen', '75-Panaderías Comunales CLAP', 'c1'),
+(1171, 303, 0, '492135', 'V', '118300773', 'panaderia artesanal el pajaro azul de edickson', '75-Panaderías Comunales CLAP', 'c1'),
+(1172, 303, 0, '470557', 'V', '113826009', 'PANADERIA JAIRO NUÑEZ', '75-Panaderías Comunales CLAP', 'c1'),
+(1173, 303, 0, '492128', 'V', '118300773', 'panaderia artesanal pajaro azul', '75-Panaderías Comunales CLAP', 'c1'),
+(1174, 308, 0, '474837', 'V', '58818360', 'panaderia artesanal mirna', '75-Panaderías Comunales CLAP', 'c1'),
+(1175, 308, 0, '447033', 'V', '152446469', 'panderia cerro la o', '75-Panaderías Comunales CLAP', 'c1'),
+(1176, 308, 0, '488706', 'V', '115139866', 'Dulces y Panes Artesanales Blanca', '75-Panaderías Comunales CLAP', 'c1'),
+(1177, 308, 0, '485442', 'V', '191905799', 'ALVARO CARMELO SALAZAR MARIN', '75-Panaderías Comunales CLAP', 'c1'),
+(1178, 300, 0, '513800', 'V', '182150858', 'Los besos de maita', '109-Pastelería', 'c1'),
+(1179, 300, 0, '513859', 'V', '125316367', 'Dulces Criollos Mi Familia', '109-Pastelería', 'c1'),
+(1180, 300, 0, '517075', 'V', '141733261', 'Panaderia Mi Familia', '56-Panadería Venezuela', 'c1'),
+(1181, 300, 0, '517066', 'V', '58737956', 'panaderia Angel Rosario Diaz', '56-Panadería Venezuela', 'c1'),
+(1182, 300, 0, '198085', 'J', '400600650', 'sol de oriente', '56-Panadería Venezuela', 'c1'),
+(1183, 300, 0, '201786', 'V', '42974176', 'panaderia artesanal dircia gonzalez', '56-Panadería Venezuela', 'c1'),
+(1184, 300, 0, '242784', 'V', '94546636', 'panaderia artesanal mis nietos', '56-Panadería Venezuela', 'c1'),
+(1185, 303, 0, '199543', 'J', '314530461', 'MINI PANADERIA MANICUARE C.A', '56-Panadería Venezuela', 'c1');
 
 -- --------------------------------------------------------
 
@@ -684,14 +976,6 @@ CREATE TABLE `gerencia` (
   `sexo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `tipo` varchar(50) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Dumping data for table `gerencia`
---
-
-INSERT INTO `gerencia` (`id_gerencia`, `id_empresa`, `nacionalidad`, `cedula`, `nombres`, `apellidos`, `sexo`, `tipo`) VALUES
-(51, 1, 'V', '20574205', 'angel charlot', 'pavan', 'M', 'propietario'),
-(52, 1, 'V', '20574205', 'angel charlot', 'pavan', 'M', 'encargado');
 
 -- --------------------------------------------------------
 
@@ -1195,7 +1479,450 @@ INSERT INTO `log` (`id`, `id_usuario`, `ip`, `controlador`, `metodo`, `fecha`, `
 (478, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '02:07:30'),
 (479, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '02:08:10'),
 (480, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '02:08:38'),
-(481, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '02:09:03');
+(481, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '02:09:03'),
+(482, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:16:55'),
+(483, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:19:45'),
+(484, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:20:49'),
+(485, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '02:22:10'),
+(486, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:22:13'),
+(487, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:24:54'),
+(488, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:24:59'),
+(489, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:25:04'),
+(490, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:31:23'),
+(491, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:31:28'),
+(492, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:07'),
+(493, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:09'),
+(494, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:42:19'),
+(495, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:23'),
+(496, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:28'),
+(497, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:28'),
+(498, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:30'),
+(499, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:47'),
+(500, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:47'),
+(501, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:48'),
+(502, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:59'),
+(503, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:42:59'),
+(504, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:43:01'),
+(505, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:43:21'),
+(506, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:43:22'),
+(507, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:43:22'),
+(508, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:43:59'),
+(509, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:44:06'),
+(510, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:44:06'),
+(511, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:44:07'),
+(512, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:44:55'),
+(513, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:44:56'),
+(514, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:45:04'),
+(515, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:45:04'),
+(516, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:45:04'),
+(517, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:45:09'),
+(518, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:45:14'),
+(519, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:50:13'),
+(520, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:21'),
+(521, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:24'),
+(522, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:25'),
+(523, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:26'),
+(524, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:28'),
+(525, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:29'),
+(526, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:29'),
+(527, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:29'),
+(528, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:55'),
+(529, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:50:55'),
+(530, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '02:50:59'),
+(531, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '02:51:09'),
+(532, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '02:51:09'),
+(533, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '02:51:20'),
+(534, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '02:51:23'),
+(535, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '02:51:40'),
+(536, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '02:51:41'),
+(537, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:51:43'),
+(538, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:51:48'),
+(539, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:51:49'),
+(540, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:51:51'),
+(541, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:51:51'),
+(542, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:51:53'),
+(543, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:51:54'),
+(544, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '02:52:24'),
+(545, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:52:28'),
+(546, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '02:52:29'),
+(547, NULL, '127.0.0.1', 'login', 'index', '2017-05-11', '08:10:37'),
+(548, NULL, '127.0.0.1', 'login', 'index', '2017-05-11', '08:10:47'),
+(549, 1, '127.0.0.1', 'app', 'index', '2017-05-11', '08:10:47'),
+(550, 1, '127.0.0.1', 'login', 'index', '2017-05-11', '08:12:14'),
+(551, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '08:12:14'),
+(552, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '08:12:22'),
+(553, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '08:12:22'),
+(554, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:12:39'),
+(555, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '08:13:02'),
+(556, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '08:13:02'),
+(557, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '08:13:03'),
+(558, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:27:48'),
+(559, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:28:13'),
+(560, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:31:07'),
+(561, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:32:11'),
+(562, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:42:58'),
+(563, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:43:48'),
+(564, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:47:09'),
+(565, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:51:28'),
+(566, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:51:44'),
+(567, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:52:29'),
+(568, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:55:36'),
+(569, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '08:57:26'),
+(570, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:03:36'),
+(571, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:06:17'),
+(572, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:26:39'),
+(573, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:26:39'),
+(574, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:26:41'),
+(575, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:26:44'),
+(576, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:26:44'),
+(577, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:27:04'),
+(578, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:27:07'),
+(579, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:27:07'),
+(580, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:27:10'),
+(581, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:27:11'),
+(582, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:27:13'),
+(583, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:27:18'),
+(584, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:27:21'),
+(585, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:27:21'),
+(586, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:28:28'),
+(587, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:28:48'),
+(588, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:28:48'),
+(589, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:28:54'),
+(590, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:28:54'),
+(591, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:31:09'),
+(592, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:31:22'),
+(593, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:31:22'),
+(594, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:32:11'),
+(595, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:38:26'),
+(596, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '09:38:33'),
+(597, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:50:22'),
+(598, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:50:34'),
+(599, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:51:17'),
+(600, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:51:36'),
+(601, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:52:32'),
+(602, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '09:53:26'),
+(603, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:05:17'),
+(604, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:06:27'),
+(605, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:06:47'),
+(606, 1, '127.0.0.1', 'login', 'index', '2017-05-11', '10:06:54'),
+(607, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '10:06:54'),
+(608, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:06:56'),
+(609, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:07:41'),
+(610, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:08:20'),
+(611, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:09:16'),
+(612, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:11:38'),
+(613, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:24:54'),
+(614, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:25:03'),
+(615, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:27:59'),
+(616, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:29:27'),
+(617, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:29:50'),
+(618, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:31:46'),
+(619, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:34:16'),
+(620, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:38:17'),
+(621, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:38:56'),
+(622, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:39:42'),
+(623, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:41:01'),
+(624, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:41:54'),
+(625, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:42:32'),
+(626, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:47:03'),
+(627, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:50:29'),
+(628, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:50:38'),
+(629, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:52:00'),
+(630, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '10:53:10'),
+(631, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '10:55:51'),
+(632, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:55:56'),
+(633, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:01'),
+(634, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:02'),
+(635, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:02'),
+(636, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:02'),
+(637, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:03'),
+(638, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:03'),
+(639, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:03'),
+(640, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:03'),
+(641, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '10:56:03'),
+(642, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '11:00:40'),
+(643, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '11:00:40'),
+(644, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:00:43'),
+(645, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:01:21'),
+(646, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:04:26'),
+(647, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:04:58'),
+(648, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:08:51'),
+(649, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:09:59'),
+(650, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:19:16'),
+(651, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:31:58'),
+(652, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:32:28'),
+(653, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:33:28'),
+(654, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:38:36'),
+(655, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:49:34'),
+(656, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:51:05'),
+(657, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '11:57:06'),
+(658, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '11:57:13'),
+(659, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '12:09:28'),
+(660, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '12:09:35'),
+(661, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '12:09:54'),
+(662, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '13:28:17'),
+(663, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '13:28:24'),
+(664, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '13:28:32'),
+(665, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '13:28:34'),
+(666, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '13:28:37'),
+(667, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:30:04'),
+(668, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:30:42'),
+(669, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:31:41'),
+(670, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:32:10'),
+(671, 1, '127.0.0.1', 'login', 'index', '2017-05-11', '13:32:15'),
+(672, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '13:32:15'),
+(673, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:32:21'),
+(674, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:32:21'),
+(675, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:32:21'),
+(676, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:34:39'),
+(677, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:34:48'),
+(678, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:36:02'),
+(679, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:36:03'),
+(680, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:36:05'),
+(681, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:36:05'),
+(682, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:36:05'),
+(683, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '13:36:07'),
+(684, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:36:11'),
+(685, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:36:12'),
+(686, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:38:02'),
+(687, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:11'),
+(688, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:13'),
+(689, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:14'),
+(690, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:20'),
+(691, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:20'),
+(692, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:21'),
+(693, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:38:33'),
+(694, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:38'),
+(695, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:40'),
+(696, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:40'),
+(697, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:52'),
+(698, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:52');
+INSERT INTO `log` (`id`, `id_usuario`, `ip`, `controlador`, `metodo`, `fecha`, `hora`) VALUES
+(699, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:53'),
+(700, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:53'),
+(701, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:53'),
+(702, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:56'),
+(703, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:38:57'),
+(704, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:39:22'),
+(705, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:41:08'),
+(706, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:42:43'),
+(707, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:43:29'),
+(708, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:43:52'),
+(709, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:43:54'),
+(710, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:44:00'),
+(711, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '13:44:03'),
+(712, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '13:51:58'),
+(713, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '13:53:56'),
+(714, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:53:59'),
+(715, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '13:54:42'),
+(716, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '13:54:45'),
+(717, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '14:00:58'),
+(718, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '14:01:06'),
+(719, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '14:25:29'),
+(720, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '14:25:49'),
+(721, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '14:27:13'),
+(722, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '14:27:18'),
+(723, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '14:27:20'),
+(724, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '14:27:21'),
+(725, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '14:29:52'),
+(726, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '14:32:41'),
+(727, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '14:33:09'),
+(728, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '15:15:32'),
+(729, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '15:19:20'),
+(730, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:19:24'),
+(731, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:22:12'),
+(732, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:22:41'),
+(733, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:29:53'),
+(734, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:32:34'),
+(735, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:34:39'),
+(736, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:35:01'),
+(737, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:35:01'),
+(738, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:35:01'),
+(739, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:35:03'),
+(740, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:35:23'),
+(741, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:35:26'),
+(742, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:35:26'),
+(743, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:36:57'),
+(744, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:37:48'),
+(745, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '15:37:50'),
+(746, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '15:40:01'),
+(747, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '15:41:06'),
+(748, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:45:36'),
+(749, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '15:48:25'),
+(750, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:48:26'),
+(751, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '15:48:30'),
+(752, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:48:35'),
+(753, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:48:38'),
+(754, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:48:42'),
+(755, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '15:54:24'),
+(756, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:54:28'),
+(757, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:54:37'),
+(758, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '15:55:12'),
+(759, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '15:55:31'),
+(760, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '15:55:32'),
+(761, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:33'),
+(762, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:33'),
+(763, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:34'),
+(764, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:34'),
+(765, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:34'),
+(766, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:34'),
+(767, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:35'),
+(768, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:35'),
+(769, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:35'),
+(770, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:36'),
+(771, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:36'),
+(772, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:36'),
+(773, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:37'),
+(774, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '15:55:37'),
+(775, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '15:56:06'),
+(776, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:56:12'),
+(777, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '15:56:16'),
+(778, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '15:57:06'),
+(779, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '15:57:09'),
+(780, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '16:00:38'),
+(781, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '16:00:55'),
+(782, 1, '127.0.0.1', 'ingresar', 'cargar_municipio', '2017-05-11', '16:00:55'),
+(783, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '16:00:56'),
+(784, 1, '127.0.0.1', 'ingresar', 'cargar_parroquia', '2017-05-11', '16:00:56'),
+(785, 1, '127.0.0.1', 'ingresar', 'guardar', '2017-05-11', '16:01:03'),
+(786, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '16:01:03'),
+(787, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '16:01:07'),
+(788, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '16:01:12'),
+(789, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '16:01:14'),
+(790, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '16:04:46'),
+(791, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '16:05:20'),
+(792, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '16:06:30'),
+(793, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '16:07:22'),
+(794, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '16:13:33'),
+(795, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '16:13:38'),
+(796, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '17:40:59'),
+(797, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:06'),
+(798, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:08'),
+(799, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:28'),
+(800, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:28'),
+(801, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:29'),
+(802, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:30'),
+(803, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:31'),
+(804, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:32'),
+(805, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:32'),
+(806, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:32'),
+(807, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:33'),
+(808, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:35'),
+(809, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:40'),
+(810, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:41:41'),
+(811, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:42:22'),
+(812, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:42:23'),
+(813, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:42:23'),
+(814, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:42:26'),
+(815, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '17:42:26'),
+(816, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:46'),
+(817, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:47'),
+(818, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:48'),
+(819, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:48'),
+(820, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:51'),
+(821, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:52'),
+(822, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:52'),
+(823, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:36:53'),
+(824, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:42:53'),
+(825, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:42:53'),
+(826, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:42:53'),
+(827, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:43:16'),
+(828, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:43:17'),
+(829, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:43:18'),
+(830, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:43:19'),
+(831, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '18:44:26'),
+(832, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:44:32'),
+(833, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:44:36'),
+(834, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:44:36'),
+(835, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:44:36'),
+(836, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:44:37'),
+(837, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:44:37'),
+(838, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '18:45:23'),
+(839, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:45:29'),
+(840, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:46:02'),
+(841, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '18:49:28'),
+(842, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '18:49:28'),
+(843, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '18:50:47'),
+(844, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '18:54:02'),
+(845, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '18:54:21'),
+(846, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '18:54:27'),
+(847, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '18:54:29'),
+(848, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '18:54:30'),
+(849, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '19:04:39'),
+(850, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:04:46'),
+(851, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:04:56'),
+(852, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:05:15'),
+(853, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:05:26'),
+(854, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '19:05:41'),
+(855, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '19:09:03'),
+(856, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:09:19'),
+(857, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '19:14:59'),
+(858, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '19:15:02'),
+(859, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '19:15:05'),
+(860, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '19:15:05'),
+(861, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '19:15:14'),
+(862, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '19:17:08'),
+(863, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '19:17:17'),
+(864, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '19:17:18'),
+(865, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:17:29'),
+(866, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:17:29'),
+(867, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:17:34'),
+(868, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:20:21'),
+(869, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:20:49'),
+(870, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:21:05'),
+(871, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '19:25:24'),
+(872, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:06'),
+(873, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:06'),
+(874, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:15'),
+(875, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:38'),
+(876, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:38'),
+(877, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:39'),
+(878, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:41'),
+(879, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:43'),
+(880, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:45'),
+(881, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:46'),
+(882, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:47'),
+(883, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:10:48'),
+(884, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '21:11:34'),
+(885, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '21:24:47'),
+(886, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:24:50'),
+(887, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:24:54'),
+(888, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:24:54'),
+(889, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:25:00'),
+(890, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:25:05'),
+(891, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:25:05'),
+(892, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:25:52'),
+(893, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:25:59'),
+(894, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:25:59'),
+(895, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:27:10'),
+(896, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:27:15'),
+(897, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:27:16'),
+(898, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:27:26'),
+(899, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '21:27:28'),
+(900, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:27:31'),
+(901, 1, '127.0.0.1', 'ingresar', 'index', '2017-05-11', '21:27:33'),
+(902, 1, '127.0.0.1', 'login', 'index', '2017-05-11', '21:27:39'),
+(903, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:27:39'),
+(904, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:27:43'),
+(905, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:27:44'),
+(906, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:28:03'),
+(907, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:29:26'),
+(908, 1, '127.0.0.1', 'principal', 'index', '2017-05-11', '21:30:55'),
+(909, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:31:03'),
+(910, 1, '127.0.0.1', 'principal', 'buscar_por_code', '2017-05-11', '21:31:03'),
+(911, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:14'),
+(912, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:15'),
+(913, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:15'),
+(914, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:16'),
+(915, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:16'),
+(916, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:16'),
+(917, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:20'),
+(918, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:22'),
+(919, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:22'),
+(920, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:22'),
+(921, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:23'),
+(922, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:31:23'),
+(923, 1, '127.0.0.1', 'principal', 'buscar_por_rif', '2017-05-11', '21:32:50');
 
 -- --------------------------------------------------------
 
@@ -1211,16 +1938,6 @@ CREATE TABLE `maquinas` (
   `cantidad` varchar(300) COLLATE utf8_spanish_ci NOT NULL,
   `estatus` varchar(300) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Dumping data for table `maquinas`
---
-
-INSERT INTO `maquinas` (`id_maquinaria`, `id_empresa`, `maquina`, `cantidad`, `estatus`) VALUES
-(12, 1, 'bandeja', '2', 'posee'),
-(13, 1, 'bandeja', '2', 'posee'),
-(14, 1, 'batidor', '2', 'posee'),
-(15, 1, 'congelador', '2', 'posee');
 
 -- --------------------------------------------------------
 
@@ -1240,13 +1957,6 @@ CREATE TABLE `materia_prima_req` (
   `levadura` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `aceite` varchar(100) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Dumping data for table `materia_prima_req`
---
-
-INSERT INTO `materia_prima_req` (`id_materia`, `id_empresa`, `harina`, `azucar`, `sal`, `manteca`, `margarina`, `levadura`, `aceite`) VALUES
-(19, 1, 'asdsa', 'dsads', 'adsad', 'sadasd', 'sadas', 'dasdsad', 'asdasd');
 
 -- --------------------------------------------------------
 
@@ -2853,13 +3563,6 @@ CREATE TABLE `telefono_emp` (
   `tipo` varchar(30) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Dumping data for table `telefono_emp`
---
-
-INSERT INTO `telefono_emp` (`id_tlf`, `id_propietario`, `tlf`, `tipo`) VALUES
-(53, 1, 'telefono 1', 'empresa');
-
 -- --------------------------------------------------------
 
 --
@@ -2873,15 +3576,6 @@ CREATE TABLE `telefono_gere` (
   `tlf` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `tipo` varchar(30) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Dumping data for table `telefono_gere`
---
-
-INSERT INTO `telefono_gere` (`id_tlf`, `id_propietario`, `tlf`, `tipo`) VALUES
-(19, 51, 'telefono 1 dueeño', 'propietario'),
-(20, 51, 'telefono 2 dueeño', 'propietario'),
-(21, 52, '04145896963', 'encargado');
 
 -- --------------------------------------------------------
 
@@ -3061,17 +3755,17 @@ ALTER TABLE `ciudades`
 -- AUTO_INCREMENT for table `email_emp`
 --
 ALTER TABLE `email_emp`
-  MODIFY `id_email` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_email` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `email_gere`
 --
 ALTER TABLE `email_gere`
-  MODIFY `id_email` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_email` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1186;
 --
 -- AUTO_INCREMENT for table `estados`
 --
@@ -3081,22 +3775,22 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT for table `gerencia`
 --
 ALTER TABLE `gerencia`
-  MODIFY `id_gerencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id_gerencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 --
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=482;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=924;
 --
 -- AUTO_INCREMENT for table `maquinas`
 --
 ALTER TABLE `maquinas`
-  MODIFY `id_maquinaria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_maquinaria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `materia_prima_req`
 --
 ALTER TABLE `materia_prima_req`
-  MODIFY `id_materia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_materia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT for table `menu`
 --
@@ -3131,12 +3825,12 @@ ALTER TABLE `switch`
 -- AUTO_INCREMENT for table `telefono_emp`
 --
 ALTER TABLE `telefono_emp`
-  MODIFY `id_tlf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_tlf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT for table `telefono_gere`
 --
 ALTER TABLE `telefono_gere`
-  MODIFY `id_tlf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_tlf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
@@ -3169,12 +3863,6 @@ ALTER TABLE `email_emp`
 --
 ALTER TABLE `email_gere`
   ADD CONSTRAINT `email_gere_ibfk_1` FOREIGN KEY (`id_propietario`) REFERENCES `gerencia` (`id_gerencia`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `empresa`
---
-ALTER TABLE `empresa`
-  ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`id_parroquia`) REFERENCES `parroquias` (`id_parroquia`);
 
 --
 -- Constraints for table `gerencia`
