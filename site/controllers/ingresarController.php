@@ -16,11 +16,12 @@ class ingresarController extends Controller
 
 
 			
-			$this->_view->setJs(array('index'));
+			$this->_view->setJs(array('index','validar'));
 			$this->_view->setCss(array('css'));
         		$this->_view->titulo = 'Ingresar';
         		$this->_panadero->cargar_estados_all();
         		$this->_panadero->cargar_municipio(18);
+        		$this->_panadero->cargar_parroquia(309);
         		$this->_view->panadero =$this->_panadero;
         	
 			$this->_view->renderizar('index');
@@ -51,11 +52,11 @@ class ingresarController extends Controller
 		    public function guardar()
     			{
 
-        	
+        	print_r($_POST);
 
         	$this->_panadero->guardar($_POST);
 
-        	$this->redireccionar('ingresar');
+        	//$this->redireccionar('ingresar');
 			
 			}
 

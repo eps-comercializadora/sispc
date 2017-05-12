@@ -7,43 +7,60 @@
 	
 	<div id="accordion">
 	  <h3>Registro de consumidores de trigo inscritos en el SICA del estado Sucre</h3>
-	  <div>
-	    <p>Registro de consumidores de trigo inscritos en el SICA del estado Sucre. <br>
-		un registro integrado para el censo de los trabajadores del procesamiento de la harina de trigo, qie tiene como finalidad normalizar la data del censo altual y cruzarla con la data de EPS comercializadora de alimentos S.A <br><br>
-	
-		<a href="<?php echo BASE_URL ?>ingresar">Registrar cosumidor de harina de trigo.</a> 
+		  <div>
+		    <p>Registro de consumidores de trigo inscritos en el SICA del estado Sucre. <br>
+			un registro integrado para el censo de los trabajadores del procesamiento de la harina de trigo, que tiene como finalidad normalizar la data del censo actual y cruzarla con la data de EPS comercializadora de alimentos<br><br>
+		
+			<a href="<?php echo BASE_URL ?>ingresar">Registrar cosumidor de harina de trigo.</a> 
 
-	     </p>
-	  </div>
+		     </p>
+		  </div>
 	  <h3>Busqueda por codigo SICA</h3>
-	  <div>
-	    	
-	    	<div class="col-md-6 col-md-offset-3">
-		<div class="form-group">
-		<label for="">Codigo SICA</label>
-		<input type="text" class="form-control" id="codigo" name="codigo" >
-		</div>
-		</div>
+		  <div>
+		    	
+		    	<div class="col-md-6 col-md-offset-3">
+			<div class="form-group">
+			<label for="">Codigo SICA</label>
+			<input type="text" class="form-control" id="codigo" name="codigo" >
+			</div>
+			</div>
 
 
-	  </div>
+		  </div>
+	  <h3>Busqueda por RIF</h3>
+		  <div>
+		    	
+		    	<div class="col-md-6 col-md-offset-3">
+			<div class="form-group">
+			<label for="">tipo de rif</label>
+			<select class="form-control" id="tipo_rif" name="tipo_rif" >
+			<option value=""></option>
+			<option value="V">V</option>
+			<option value="J">J</option>
+			</select>
+			</div>
+			<div class="form-group">
+			<label for="">rif</label>
+			<input type="text" class="form-control" id="rif" name="rif" >
+			</div>
+			<button type="button" id="btn_buscar_por_rif"  class="btn btn-default">Buscar</button>
+			</div>
+
+
+		  </div>
 	  <h3>¿que es SICA?</h3>
-	  <div>
-	    <p> 
-
-Redactar un brebe resumen de sus objetivos
-</p>
-	  
-	  </div>
+		  <div>
+		    <p>Redactar un brebe resumen de sus objetivos</p>
+		  
+		  </div>
 	  <h3>Estadisticas</h3>
-	  <div>
-	    <p>En construccion </p>
-	  </div>
+		  <div>
+		    <p>En construccion </p>
+		  </div>
 	</div>
-
 </div>
 
-<div id="lista" class="col-md-6 col-md-offset-3">
+<div id="lista" class="col-md-10 col-md-offset-1">
 	
 
 

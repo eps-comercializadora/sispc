@@ -77,11 +77,31 @@
                 </div>
             </div>
     </nav>
-
+    
 
     <div class="container-fluid fondo">
+<div class="row">
+    
+    <div id="banner">
+        
+<div class="col-md-4">
+    <img id="sucre" src="<?php echo BASE_URL ?>public/img/sucre.gif" alt="">
+</div>
+<div class="col-md-4">
+     <img id="cosdesu" src="<?php echo BASE_URL ?>public/img/codesu.png" alt="">
+</div>
+<div class="col-md-4">
+    <img id="sumagro" src="<?php echo BASE_URL ?>public/img/sunagro.gif" alt="">
+</div>
+<div class="col-md-4">
+    <img id="eps" src="<?php echo BASE_URL ?>public/img/eps.gif" alt="">
+</div>
 
-    <input type="hidden" value="<?php echo Session::get('role');?>" id="_ROL_">
+    </div>
+
+</div>
+
+  
 
     <div class="row">
 

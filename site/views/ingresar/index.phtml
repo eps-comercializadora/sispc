@@ -1,13 +1,13 @@
 <div class="col-md-12">
 
 
-<div class="col-md-8 col-md-offset-2">
+<div id="tabs" class="col-md-8 col-md-offset-2">
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Consumidor</a>
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Ente consumidor de harina de trigo</a>
     </li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Datos de dueño</a></li>
+    <li role="presentation"><a href="#profile"  aria-controls="profile" role="tab" data-toggle="tab">Datos de dueño</a></li>
     <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Datos de encargado</a></li>
      <li role="presentation"><a href="#requerido" aria-controls="requerido" role="tab" data-toggle="tab">materia prima requerida</a></li>
     <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Maquinarias</a></li>
@@ -16,19 +16,19 @@
   </ul>
 
   <!-- Tab panes -->
-
-  <form method="post" action="<?php echo BASE_URL ?>ingresar/guardar">
+  		 	
+ 
   	
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="home">
-    				
+  		<form id="form_emp" method="post" action="">	
 		<div class="form-group">
-		<label for="">Codigo SICA</label>
+		<label for="">Codigo SICA <font id="requerido_aste">*</font></label>
 		<input type="text" class="form-control" id="codigo" name="codigo" >
 		</div>
 
 		<div class="form-group">
-		<label for="">Tipo de RIF</label>
+		<label for="">Tipo de RIF <font id="requerido_aste">*</font></label>
 		<select name="figura" id="figura" class="form-control" > 
 		<option value="">--seleccione--</option>
 		<option value="V">V</option>
@@ -37,18 +37,18 @@
 		</div>
 
 		<div class="form-group">
-		<label for="">RIF.</label>
+		<label for="">RIF <font id="requerido_aste">*</font></label>
 		<input type="text" class="form-control" id="rif" name="rif" >
 		</div>
 
 		<div class="form-group">
-		<label for="">Nombre o razon social</label>
+		<label for="">Nombre o razon social <font id="requerido_aste">*</font></label>
 		<input type="text" class="form-control" id="razon" name="razon" >
 		</div>
 
 
 		<div class="form-group">
-		<label for="">Estado</label>
+		<label for="">Estado <font id="requerido_aste">*</font></label>
 		<select name="estados" id="estados" class="form-control">
 		<option value="">--seleccione--</option>
 		<?php for ($i=0; $i < count($this->panadero->estados) ; $i++):?>
@@ -59,7 +59,7 @@
 
 
 		<div class="form-group">
-		<label for="">Municipio</label>
+		<label for="">Municipio <font id="requerido_aste">*</font></label>
 		<select name="municipio" id="municipio" class="form-control">
 		<option value="">--seleccione--</option>
 		<?php for ($i=0; $i < count($this->panadero->municipios) ; $i++):?>
@@ -68,15 +68,22 @@
 		</select>
 		</div>
 
+
+		
 		<div class="form-group">
-		<label for="">Parroquia</label>
+		<label for="">Parroquia <font id="requerido_aste">*</font></label>
 		<select name="parroquia" id="parroquia" class="form-control">
 		<option value="">--seleccione--</option>
+		<?php for ($i=0; $i < count($this->panadero->parroquia) ; $i++):?>
+		<option value="<?php echo $this->panadero->parroquia[$i]['id_parroquia'] ?>" ><?php echo $this->panadero->parroquia[$i]['parroquia'] ?></option>
+		<?php endfor; ?>
 		</select>
 		</div>
 
+		
+
 		<div class="form-group">
-		<label for="">tipo de ente</label>
+		<label for="">tipo de ente <font id="requerido_aste">*</font></label>
 		<select name="tipo_ente" id="tipo_ente" class="form-control" > 
 		<option value="">--seleccione--</option>
 		<option value="42-Panadería y Pasteleria">42-Panadería y Pasteleria</option>
@@ -87,7 +94,7 @@
 		</div>
 
 		<div class="form-group">
-		<label for="">circuito</label>
+		<label for="">circuito <font id="requerido_aste">*</font></label>
 		<select name="circuito" id="circuito" class="form-control" > 
 		<option value="">--seleccione--</option>
 		<option value="c1">circuito 1</option>
@@ -97,11 +104,15 @@
 		</div>
 
 		<div class="form-group">
-		<label for="">Telefono</label>
+		<label for="">Telefono </label>
 		<input type="text" class="form-control" id="emp_tlf" name="emp_tlf[]" >
 		 <div class="div_agregar_tlf_emp">
 		 	 <span class="glyphicon glyphicon-plus" id="agregar_tlf_emp" aria-hidden="true"></span>
 		 </div>
+		 <div id="show_tlf_emp">
+			
+		</div>
+
 		
 
 		</div>
@@ -112,13 +123,16 @@
 		<div class="div_agregar_email_emp">
 		 	 <span class="glyphicon glyphicon-plus" id="agregar_email_emp" aria-hidden="true"></span>
 		 </div>
+		 <div id="show_email_emp">
+			
+		</div>
 		</div>			
-		
+		</form>
     </div>
     <div role="tabpanel" class="tab-pane" id="profile">
 
 		
-
+		<form id="form_due" method="post" action="">	
 		<div class="form-group">
 		<label for="">Nacionalidad</label>
 		<select name="nacionalidad" id="nacionalidad" class="form-control" > 
@@ -159,24 +173,33 @@
 		 <div class="div_agregar_tlf_due">
 		 	 <span class="glyphicon glyphicon-plus" id="agregar_tlf_due" aria-hidden="true"></span>
 		 </div>
+		 <div id="show_tlf_due">
+			
 		</div>
+		</div>
+		
 
 		<div class="form-group">
 		<label for="">Correo electronico</label>
-		<input type="text" class="form-control" name="due_email[]" id="due_email[]" >
+		<input type="text" class="form-control" name="due_email" id="due_email" >
 		<div class="div_agregar_email_due">
 		 	 <span class="glyphicon glyphicon-plus" id="agregar_email_due" aria-hidden="true"></span>
 		 </div>
+		  <div id="show_email_due">
+			
+		</div>
 		</div>
 
 	
 
-
+		</form>
 
 
 
     </div>
     <div role="tabpanel" class="tab-pane" id="messages">
+
+
     	
 		<div class="form-group">
 		<label for="">Nacionalidad</label>
@@ -218,6 +241,9 @@
 		<div class="div_agregar_tlf_enc">
 		 	 <span class="glyphicon glyphicon-plus" id="agregar_tlf_enc" aria-hidden="true"></span>
 		 </div>
+		 <div id="show_tlf_enc">
+			
+		</div>
 		</div>
 
 		<div class="form-group">
@@ -226,6 +252,9 @@
 		<div class="div_agregar_email_enc">
 		 	 <span class="glyphicon glyphicon-plus" id="agregar_email_enc" aria-hidden="true"></span>
 		 </div>
+		  <div id="show_email_enc">
+			
+		</div>
 		</div>
     </div>
     <div role="tabpanel" class="tab-pane" id="requerido">
@@ -336,15 +365,16 @@
 		</div>
      </div>
   </div>
-<input type="submit" value="enviar">
-  </form>
+
+<button type="button" id="prueba1">prueba1</button>
+
 
 
 </div>
 
 
 
-
+ 
 </div>
 			
 

@@ -35,3 +35,11 @@
 .glyphicon.glyphicon-plus {
 	cursor: pointer;
 }
+#requerido_aste {
+	color: red;
+	/* padding: 4px; */
+	font-size: 18px;
+	/* border: 1px solid; */
+	line-height: 0;
+	height: 1px;
+}

@@ -33,6 +33,13 @@ class principalController extends Controller
 		echo json_encode($this->_index->buscar_por_code($_GET['codigo']));
 
 	}
+		public function buscar_por_rif(){
+
+		
+
+		echo json_encode($this->_index->buscar_por_rif($_GET));
+
+	}
 
 }
 

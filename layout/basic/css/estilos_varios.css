@@ -35,3 +35,22 @@ border-color: #FFF;
 	
 	
 }
+#banner {
+	min-height: 163px;
+	margin-top: -14px;
+	background-color: #00aeff;
+}
+#sucre {
+	width: 35%;
+	margin-left: 10%;
+	margin-top: 14px;
+}
+#cosdesu {
+	width: 70%;
+	margin-left: 11%;
+}
+#eps {
+	width: 48%;
+	left: 13px;
+	margin-left: 42%;
+}

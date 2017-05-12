@@ -37,7 +37,23 @@ class panaderoModel extends Model
         $datos->setFetchMode(PDO::FETCH_ASSOC);
 
         $this->municipios=$datos->fetchall();
-        print_r($datos->fetchall());
+        //print_r($datos->fetchall());
+        return $datos->fetchall();
+
+
+
+    }
+            public function cargar_parroquia($municipio){
+
+
+    $sql="select * from parroquias where id_municipio='$municipio' ";
+       
+
+        $datos = $this->_db->query($sql);
+        $datos->setFetchMode(PDO::FETCH_ASSOC);
+
+        $this->parroquia=$datos->fetchall();
+        //print_r($datos->fetchall());
         return $datos->fetchall();
 
 
@@ -76,7 +92,7 @@ class panaderoModel extends Model
 
 
 
-    $sql="insert into empresa values ('','".$datos['parroquia']."','".$datos['codigo']."','".$datos['figura']."','".$datos['rif']."','".$datos['razon']."','".$datos['tipo_ente']."','".$datos['circuito']."')";
+    $sql="insert into empresa values ('','".$datos['municipio']."','".$datos['parroquia']."','".$datos['codigo']."','".$datos['figura']."','".$datos['rif']."','".$datos['razon']."','".$datos['tipo_ente']."','".$datos['circuito']."')";
     $this->_db->query($sql);
     $id_empresa=$this->_db->lastInsertId();
 
@@ -149,7 +165,7 @@ class panaderoModel extends Model
 
           for ($i=0; $i < count($datos['maquina']); $i++) { 
 
-    $sql="insert into maquinas values ('','".$id_empresa."','".$datos['maquina'][$i]."','".$datos['cantidad'][$i]."','".$datos['estatus'][$i]."')";
+    $sql="insert into maquinas values ('','".$id_empresa."','".$datos['maquina'][$i]['maquina']."','".$datos['maquina'][$i]['cantidad']."','".$datos['maquina'][$i]['estatus']."')";
 
       $this->_db->query($sql);
 

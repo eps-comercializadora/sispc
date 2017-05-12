@@ -2,7 +2,7 @@
 define('BASE_URL', 'http://localhost/sispc/');
 define('DEFAULT_CONTROLLER', 'login');
 define('DEFAULT_LAYOUT', 'basic');
-define('APP_NAME', 'SISPC');
+define('APP_NAME', 'EPS & SUNAGRO');
 define('APP_SLOGAN', 'Censo de consumidores ');
 define('APP_COMPANY', 'Eps Comersializadora de alimentos');
 define('APP_TLF', '');
