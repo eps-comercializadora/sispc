@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL', 'http://localhost/sispc/');
+define('BASE_URL', 'http://sistema01/sispc/');
 define('DEFAULT_CONTROLLER', 'login');
 define('DEFAULT_LAYOUT', 'basic');
 define('APP_NAME', 'EPS & SUNAGRO');

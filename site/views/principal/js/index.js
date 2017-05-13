@@ -22,7 +22,7 @@ $(document).on('keyup', '#codigo', function() {
 
 		var html="";
 
-		html+='<table class="table">';
+		html+='<table class="table reponcive">';
 		html+="<tr>";
 		html+="<td>codigo SICA</td>";
 		html+="<td></td>";
@@ -56,7 +56,7 @@ for (var i =0 ; i < datos.length; i++) {
 		html+="</table> ";
 
 
-		$("#lista").html(html);
+		$("#lista1").html(html);
 
 	},"json");
 
@@ -113,7 +113,7 @@ for (var i =0 ; i < datos.length; i++) {
 		html+="</table> ";
 
 
-		$("#lista").html(html);
+		$("#lista2").html(html);
 
 	},"json");
 
