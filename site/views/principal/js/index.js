@@ -95,7 +95,7 @@ for (var i =0 ; i < datos.length; i++) {
 
 		html+="<tr>";
 		html+="<td>"+datos[i]['codigo_sica']+"</td>";
-		html+="<td>"+datos[i]['tipo']+"</td>";
+		html+="<td>"+datos[i]['tipo_rif_id']+"</td>";
 		html+="<td>"+datos[i]['rif']+"</td>";
 		html+="<td>"+datos[i]['razon_social']+"</td>";
 		html+="<td>"+datos[i]['tipo_ente']+"</td>";
